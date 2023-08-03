@@ -5,3 +5,4 @@
 4-listmorefiles              Display current directory contents, including hidden files (starting with .). Use the long format
 5-listfilesdigitonly         Display current directory contents
 6-firstdirectory             script that creates a directory
+7-movethatfile               move a file
