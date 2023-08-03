@@ -9,3 +9,4 @@
 8-firstdelete                delete a file betty
 9-firstdirdeletion           delete the dirctory my frist dirctoy
 10-back                      change directory to the previous one
+11-lists                     alot of lists in working dir and parent and some other dir
