@@ -10,3 +10,4 @@
 9-firstdirdeletion           delete the dirctory my frist dirctoy
 10-back                      change directory to the previous one
 11-lists                     alot of lists in working dir and parent and some other dir
+12-file_type		     print type of iamfile in tmp
