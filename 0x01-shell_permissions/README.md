@@ -41,4 +41,8 @@ Other users: all the permissions
 
 Write a script that sets the mode of the file hello to rwxr-x-wx
 
+10-mirror_permissions
+
+Write a script that sets the mode of the file hello the same as olleh’s mode
+
 
