@@ -6,3 +6,4 @@
 5-listfilesdigitonly         Display current directory contents
 6-firstdirectory             script that creates a directory
 7-movethatfile               move a file
+8-firstdelete                delete a file betty
