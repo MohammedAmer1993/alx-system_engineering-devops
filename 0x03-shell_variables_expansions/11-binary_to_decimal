@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $(bc obase=10 ibase=2 $BINARY)
+echo $(bc obase=10; ibase=2; $BINARY)
