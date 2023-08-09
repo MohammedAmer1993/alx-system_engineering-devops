@@ -1,2 +1,2 @@
 #!/bin/bash
-echo {a..n}{a..n} {a..n}o o{a..n} o{p..z} {p..z}o {p..z}{p..z}|tr " " "\n"
+printf "%s\n"<{a..n}{a..n} {a..n}o o{a..n} o{p..z} {p..z}o {p..z}{p..z}
