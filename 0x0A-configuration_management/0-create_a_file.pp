@@ -1,6 +1,6 @@
 file {'school':
     ensur   => 'file'
-    path    => '/tmp',
+    path    => '/tmp/school',
     mode    => '0744',
     owner   => 'www-data',
     group   => 'www-data',
