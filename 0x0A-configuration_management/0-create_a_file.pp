@@ -1,3 +1,5 @@
+#!/usr/bin/puppet
+
 file {'/tmp/school':
     ensure  => present,
     owner   => 'www-data',
