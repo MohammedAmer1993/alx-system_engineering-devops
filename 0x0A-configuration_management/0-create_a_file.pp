@@ -1,4 +1,4 @@
-file {'school':
+file {'/tmp/school':
     ensur   => 'file'
     path    => '/tmp/school',
     mode    => '0744',
