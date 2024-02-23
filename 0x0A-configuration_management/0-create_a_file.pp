@@ -1,4 +1,5 @@
 file {'school':
+    ensur   => 'file'
     path    => '/tmp',
     mode    => '0744',
     owner   => 'www-data',
