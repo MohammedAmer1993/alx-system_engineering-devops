@@ -1,3 +1,5 @@
+#!/usr/bin/puppet
+# puppet bash to edit ssh_config file
 file {'/etc/ssh/ssh_config':
     ensure => present
 }
