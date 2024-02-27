@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/use/bin/env bash
 
 if [ $# -lt 4 ]
 then
