@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 #this script installs NGINX
+#testing push feature
+#again test
 
 apt-get install -y nginx
