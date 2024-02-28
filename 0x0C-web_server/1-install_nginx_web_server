@@ -2,5 +2,6 @@
 #this script installs NGINX
 #testing push feature
 #again test
+#test again
 
 apt-get install -y nginx
