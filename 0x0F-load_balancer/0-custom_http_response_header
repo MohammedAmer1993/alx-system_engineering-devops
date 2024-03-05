@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# script to configure new machine running ubuntu 
+
+sudo apt update;
+sudo apt install -y nginx;
+sudo echo -e "http {
+	include mime.types;
+	server {
+		listen 80;
+		root /home/ubuntu/mywebsite;
+		index index.html;
+		location /tracks{
+                root /home/ubuntu/mywebsite;
+	        }
+		add_header X-Served-By \"${hostname}\";
+	}
+}
+
+events {}" > /etc/nginx//nginx.conf
