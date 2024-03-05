@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# script to install and configure and make sure hdproxy is working
+# and to add backend servers that we have
+
+sudo apt-get update -y
+sudo apt-get install -y --no-install-recommends software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.8
+sudo apt-get install -y haproxy=2.8.\*
+
+sudo service haproxy start
+
+echo -e " 
+backend
+	balance roundrobin
+	server 498595-web-01 54.146.91.151:80 check
+	server 498595-web-02 54.237.7.180:80 check
+"
+
+sudo service haproxy restart
