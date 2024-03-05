@@ -10,7 +10,12 @@ sudo apt-get install -y haproxy=2.8.\*
 sudo service haproxy start
 
 echo -e " 
-backend
+frontend amer
+	bind :80
+	default_backend myservers
+	
+	
+backend myservers
 	balance roundrobin
 	server 498595-web-01 54.146.91.151:80 check
 	server 498595-web-02 54.237.7.180:80 check
