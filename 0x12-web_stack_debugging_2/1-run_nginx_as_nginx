@@ -3,8 +3,8 @@
 
 
 sudo useradd -r nginx
-sudo sed -i s/'user www-data'/'user nginx;'/ /etc/nginx/nginx.conf
-sudo sed -i s/'listen*\s80;'/'listen 8080;'/ /etc/nginx/nginx.conf
-sudo chmod 644 /etx/nginx/nginx.conf
+sudo sed -i s/'user www-data;'/'user nginx;'/ /etc/nginx/nginx.conf
+sudo sed -i s/'80'/'8080'/g /etc/nginx/sites-available/default
+sudo chmod 644 /etc/nginx/nginx.conf
 sudo pkill apach2
 sudo -u nginx service nginx restart
