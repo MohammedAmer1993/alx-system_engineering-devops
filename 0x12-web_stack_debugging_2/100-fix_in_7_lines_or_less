@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 #fix it short and sweet
 sudo useradd -r nginx
-sudo awk '{gsub(/user www-data/, "user nginx"); gsub(/80/, "8080")} 1' /etc/nginx/nginx.conf > /tmp/tmp1
-sudo chmod 644 /tmp/tmp1
-sudo mv -f /tmp/tmp1 /etc/nginx/nginx.comf
+sudo awk '{gsub(/user www-data/, "user nginx")} 1' /etc/nginx/nginx.conf > /tmp/tmp1
+sudo awk '{gsub(/80/, "8080")} 1' /tmp/tmp1 > /tmp/tmp2
+sudo chmod 644 /tmp/tmp2
+sudo mv -f /tmp/tmp2 /etc/nginx/nginx.comf
 sudo -u nginx service nginx restart
