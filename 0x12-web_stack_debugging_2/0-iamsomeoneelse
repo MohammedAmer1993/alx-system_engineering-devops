@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
 #this is a script to run things like I'm someone else
 
-su "$1" -c whoami
+if [[ $# -ne 1 ]]
+then
+    echo "USAGE: $0 USERNAME"
+    exit 1
+fi
+
+sudo -u "$1" whoami
