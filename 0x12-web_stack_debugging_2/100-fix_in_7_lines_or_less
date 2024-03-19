@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 #fix it short and sweet
-
 sudo useradd -r nginx
 sudo awk '{gsub(/user www-data/, "user nginx"); gsub(/80/, "8080")} 1' /etc/nginx/nginx.conf > /tmp/tmp1
 sudo chmod 644 /tmp/tmp1
