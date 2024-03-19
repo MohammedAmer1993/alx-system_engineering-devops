@@ -1,12 +1,5 @@
 #!/usr/bin/env bash
 #this is a script to run things like I'm someone else
 
-if [[ $# -ne 1 ]]; then
-    echo "USAGE: $0 ARGS"
-    exit 1
-else
-    su "$1" -c whoami
-    exit 0
-fi
-
+su "$1" -c whoami
 
