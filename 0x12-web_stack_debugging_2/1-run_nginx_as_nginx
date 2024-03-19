@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#this script is to run nginx as nginx user not root
+
+sudo adduser nginx
+sudo sed -i s/'http* {'/'http {\n\tuser nginx;'/ nginx.conf
+sudo sed -i s/'listen* 80;'/'listen 8080;'/ nginx.conv
+sudo chown -R nginx:nginx /var/log/nginx
+sudo chown -R nginx:nginx /etc/nginx
+sudo chown -R nginx:nginx /home/ubuntu/mywebsite
+sudo systemctl restart nginx
