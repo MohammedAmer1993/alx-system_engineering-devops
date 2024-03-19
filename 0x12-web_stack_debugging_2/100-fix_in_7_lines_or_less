@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #fix it short and sweet
 sudo useradd -r nginx
-sudo sed -i "s/user www-data;/user nginx;/" /etc/nginx/nginx.conf
-sudo sed -i "s/80/8080/g" /etc/nginx/sites-available/default
-sudo chmod u+xr o+r g+r /etc/nginx/nginx.conf
+sudo awk '{gsub(/user www-data;/, "user nginx;"); gsub(/80/, "8080")} 1' /etc/nginx/nginx.conf > /tmp/tmp1
+sudo chmod 644 /tmp/tmp1
+sudo mv -f /tmp/tmp1 /etc/nginx/nginx.comf
 sudo pkill apache2
 sudo -u nginx service nginx restart
