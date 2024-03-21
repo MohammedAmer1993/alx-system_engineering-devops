@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+#for ls 
+
+for i in $(echo ./*);
+do
+    echo "${i//.\/[[:digit:]]*-/}"
+done
+
+
+#echo "$i" | sed 's#./[[:digit:]]*-##g'
