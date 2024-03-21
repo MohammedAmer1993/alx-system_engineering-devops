@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# use until loop for printing best school
+
+z=10
+until [[ $z -eq 0 ]];
+do
+    echo "Best School"
+    z=$z-1
+done

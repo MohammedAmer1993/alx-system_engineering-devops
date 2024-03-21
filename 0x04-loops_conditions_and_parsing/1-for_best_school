@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+#using 'for loop' for printing bestschool
+
+for i in 1 2 3 4 5 6 7 8 9 10;
+do
+    export i
+    echo "Best School"
+done
