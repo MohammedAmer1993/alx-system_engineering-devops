@@ -4,5 +4,4 @@
 
 # ps aux | grep "bash 4-to_infinity_and_beyond" | cut -d " " -f 4 | kill -9 
 
-x=$(pgrep -f "bash ./4-to_infinity_and_beyond")
-kill "$x"
+pkill -f "bash ./4-to_infinity_and_beyond"
