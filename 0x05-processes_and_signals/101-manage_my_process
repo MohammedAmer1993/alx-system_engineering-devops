@@ -9,12 +9,12 @@ case $1 in
         echo "manage_my_process started"
         ;;
     stop)
-        pkill -2 -f "bash ./manage*"
+        sudo pkill -9 -f "bash ./manage_my_process" > /dev/null 2>&1 
         sudo rm /var/run/my_process.pid
         echo "manage_my_process stopped"
         ;;
     restart)
-        pkill -2 -f "bash ./manage*"
+        sudo pkill -9 -f "bash ./manage_my_process" > /dev/null 2>&1 
         sudo rm /var/run/my_process.pid
         ./manage_my_process &
         sudo sh -c "echo $$ > /var/run/my_process.pid"
