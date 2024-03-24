@@ -1,1 +1,11 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
+# prosess ignores sigterm
+
+
+trap "echo I am invincible!!!" SIGTERM
+
+while true;
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
