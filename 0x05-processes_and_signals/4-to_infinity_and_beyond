@@ -1,1 +1,8 @@
-#/usr/bin/env bash
+#!/usr/bin/env bash
+# show to infinity and beyond for ever
+
+while true;
+do
+    echo "to infinity and beyond"
+    sleep 2
+done
