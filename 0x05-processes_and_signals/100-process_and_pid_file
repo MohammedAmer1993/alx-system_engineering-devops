@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# handle signals using trap
+
+function cleanup() 
+{
+    echo "I hate the kill command"
+    sudo rm /var/run/myscript.pid
+    exit
+}
+
+sudo sh -c 'echo $$ > /var/run/myscript.pid'
+
+trap "echo Y U no love me?!" SIGINT
+trap "cleanup" SIGQUIT
+trap "cleanup" SIGTERM
+
+
+while true;
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
