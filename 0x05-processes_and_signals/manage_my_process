@@ -2,6 +2,9 @@
 # write I'm alive for every 2 sec
 
 
+trap "sudo rm /var/run/my_process.pid" SIGINT
+trap "sudo rm /var/run/my_process.pid" SIGINT
+
 
 while true;
 do
