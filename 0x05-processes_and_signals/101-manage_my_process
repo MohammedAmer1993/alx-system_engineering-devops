@@ -16,7 +16,7 @@ case $1 in
     restart)
         pkill -2 -f "bash ./manage*"
         sudo rm /var/run/my_process.pid
-        ./manage_my_process
+        ./manage_my_process &
         sudo sh -c "echo $$ > /var/run/my_process.pid"
         echo "manage_my_process restarted"
         ;;
