@@ -16,11 +16,9 @@ int infinite_while(void)
 
 /**
  * main - Entry point
- * @argc: number of arguments
- * @argv: array of arguments
  * Return: 0 on success
 */
-int main(int argc, char *argv[])
+int main(void)
 {
 	int x;
 	int i = 0;
