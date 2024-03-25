@@ -33,8 +33,8 @@ int main(void)
 		else
 		{
 			++i;
-			infinite_while();
 		}
 	}
+	infinite_while();
 	return (0);
 }
