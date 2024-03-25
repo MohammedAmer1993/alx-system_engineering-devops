@@ -1,4 +1,5 @@
 #include <unistd.h>
+#include <stdio.h>
 
 
 /**
@@ -28,6 +29,7 @@ int main(void)
 		x = fork();
 		if (x == 0)
 		{
+			printf("Zombie process created, PID: %d", getpid())
 			return (0);
 		}
 		else
