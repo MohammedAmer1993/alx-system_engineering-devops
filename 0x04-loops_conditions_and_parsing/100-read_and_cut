@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# read from passwd file and show specific fields
+
+st="ll"
+while [[ -n st ]]; 
+do 
+    echo "hi"
+    sudo cat /etc/passwd | read | cut -d ":" -f 1,3,6 | echo
+    st=sudo cat /etc/passwd | read
+done
