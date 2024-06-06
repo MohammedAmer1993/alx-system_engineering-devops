@@ -1,3 +1,4 @@
+#!/usr/bin/puppet
 # this file troubleshoot wrong naming in php file
 
 exec { 'move-wp-locale-file':
