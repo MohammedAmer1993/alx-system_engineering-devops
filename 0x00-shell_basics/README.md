@@ -1,20 +1,30 @@
-0-current_working_directory  script that prints the absolute path name of the current working directory
-1-listit                     Display the contents list of your current directory
-2-bring_me_home		     script that changes the workin directory to the user’s home directory
-3-listfiles		     Display current directory contents in a long format
-4-listmorefiles              Display current directory contents, including hidden files (starting with .). Use the long format
-5-listfilesdigitonly         Display current directory contents
-6-firstdirectory             script that creates a directory
-7-movethatfile               move a file
-8-firstdelete                delete a file betty
-9-firstdirdeletion           delete the dirctory my frist dirctoy
-10-back                      change directory to the previous one
-11-lists                     alot of lists in working dir and parent and some other dir
-12-file_type		     print type of iamfile in tmp
-13-symbolic_link             create a symbolic link to /bin/ls called __ls__ 
-14-copy_html		     copy html files to parent dir without override ande with update only
-100-lets_move                script that moves all files beginning with an uppercase letter to the directory /tmp/u
-101-clean_emacs		     Create a script that deletes all files in the current working directory that end with the character ~
-102-tree		     Dirctory tree
-103-commas		     Write a command that lists all the files and directories of the current directory, separated by commas
-school.mgc                   Magic file for the command file
+# 0x00. Shell, basics
+
+this is the solution to project introduced by ***ALX Software Engineering Program*** 
+
+## Requirements
+
+### General
++ Allowed editors: `vi`, `vim`, `emacs`
++ All your scripts will be tested on Ubuntu 20.04 LTS
++ All your scripts should be exactly two lines long (`$ wc -l file` should print 2)
++ All your files should end with a new line (why?)
++ The first line of all your files should be exactly `#!/bin/bash`
++ A `README.md` file at the root of the repo, containing a description of the repository
++ A `README.md` file, at the root of the folder of this project, describing what each script is doing
++ You are not allowed to use backticks, `&&`, `||` or `;`
++ All your scripts must be executable. To make your file executable, use the `chmod` command: `chmod u+x file`. Later, we’ll learn more about how to utilize this command.
+
+### Tasks
+#### 0. Where am I?
+Write a script that prints the absolute path name of the current working directory.
+
+Example:
+
+```
+$ ./0-current_working_directory
+/root/alx-system_engineering-devops/0x00-shell_basics
+$
+```
+
+**File**: `0-current_working_directory`
