@@ -2,8 +2,8 @@
 # changing the localhost ip and facebook ip
 
 cp /etc/hosts ~/hosts.new
-sed -i '/localhost/d' /etc/hosts
-printf "127.0.0.2\tlocalhost" >> /etc/hosts
-sed -i '/facebook/d' /etc/hosts
-printf "8.8.8.8\tfacebook.com" >> /etc/hosts
+sed -i '/localhost/d' ~/hosts.new
+printf "127.0.0.2\tlocalhost" >> ~/hosts.new
+sed -i '/facebook/d' ~/hosts.new
+printf "8.8.8.8\tfacebook.com" >> ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
