@@ -3,7 +3,7 @@
 
 cp /etc/hosts ~/hosts.new
 sed -i '/localhost/d' ~/hosts.new
-printf "127.0.0.2\tlocalhost" >> ~/hosts.new
+printf "127.0.0.2\tlocalhost\n" >> ~/hosts.new
 sed -i '/facebook/d' ~/hosts.new
 printf "8.8.8.8\tfacebook.com" >> ~/hosts.new
 cp -f ~/hosts.new /etc/hosts
