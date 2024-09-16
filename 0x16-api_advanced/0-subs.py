@@ -1,33 +1,19 @@
 #!/usr/bin/python3
-""" Number of subscribers for an reddit user """
+"""
+script to get subscribers for certain subreddit user.
+"""
 
 import requests
-import json
-import uuid
-
-CLIENT_ID = "BZbNK5UKZmIWH6Z_uTin3g"
-RESPONSE_TYPE = "token"
-STATE = str(uuid.uuid4())
-REDIRECT_URI = "https://www.google.com"
-SCOPE = "read"
 
 
 def number_of_subscribers(subreddit):
-    """ function to return number of subscribers of reddit user
-    Args: 
-        subreddit (string): the name of reddit user
-    Return: 
-        int : number of subscribers
-        0   : invalid reddit user
-    """
-    url = "https://www.reddit.com/api/v1/authorize"
-    payload = {"client_id": CLIENT_ID, "response_type": RESPONSE_TYPE,
-               "state": STATE, "redirect_uri": REDIRECT_URI, "scope": SCOPE}
-
-    r = requests.get(url, params=payload)
-    return r
-
-
-r = number_of_subscribers("programming")
-print(r.status_code)
-print(r.json())
+    """Return the total number of subscribers on a given subreddit."""
+    url = "https://www.reddit.com/r/{}/about.json".format(subreddit)
+    headers = {"User-Agent": "Mozilla/5.0"}
+    response = requests.get(url, headers=headers, allow_redirects=False)
+    if response.status_code == 200:
+        data = response.json()
+        subscribers = data['data']['subscribers']
+        return subscribers
+    else:
+        return 0
